@@ -7,9 +7,9 @@ public class User {
 	 * 下記のフィールドの初期値・メソッドを得て
 	 * Mainクラスにthis.User(ID)を返す。
 	 */
-	String name;
-	int amount;
-	String rank;
+//	String name;
+//	int amount;
+//	String rank;
 
 	/**
 	 * Userの入力用メソッド
@@ -20,10 +20,36 @@ public class User {
 	 * 代入されたIDをname,amountに代入して
 	 * Mainクラスに戻る。
 	 */
-	void input(String inputName, int inputAmount) {
-		 name = inputName;
-		 amount = inputAmount;
+//	void input(String inputName, int inputAmount) {
+//		 name = inputName;
+//		 amount = inputAmount;
+//	}
+	
+	private String name;
+	private int amount;
+	private String rank;
+	
+	//引数ありコンストラクタ
+	public User(String inputName, int inputAmount) {
+		this.name = inputName;
+		
+		if (this.chkAmount(inputAmount)) {
+			this.amount = inputAmount;
+		} else {
+			this.amount = 0;
+		}
 	}
+	
+	//0以下の値を受け付けないための条件分岐
+	private Boolean chkAmount(int chkAmount) {
+		if (chkAmount > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
 
 	/**
 	 * Userオブジェクト(this.User(ID))に格納されている
