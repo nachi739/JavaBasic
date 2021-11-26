@@ -50,6 +50,9 @@ public class Main {
 		 * new ArrayList<E>();をArrayListクラスに依頼
 		 * ArrayListオブジェクト(ID)を参照型変数に代入
 		 * List<型>変数名
+		 * addメソッドを引数ありで実行
+		 * ArrayListはthisID,user1はeのパラメータIDとして
+		 * 渡される。
 		 */
 		List<User> userList = new ArrayList<User>();
 		userList.add(user1);

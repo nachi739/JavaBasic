@@ -29,6 +29,7 @@ public class User {
 	private int amount;
 	private String rank;
 	
+	//newされる際に実行されるコンストラクタ
 	//引数ありコンストラクタ
 	public User(String inputName, int inputAmount) {
 		this.name = inputName;
@@ -68,6 +69,36 @@ public class User {
 		} else {
 			rank = "冷やかし客";
 		}
+	}
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		if (this.chkAmount(amount)) {
+			this.amount = amount;
+		} else {
+			this.amount = 0;
+		}
+	}
+
+	public String getRank() {
+		return rank;
+	}
+
+	public void setRank(String rank) {
+		this.rank = rank;
 	}
 
 	/**
