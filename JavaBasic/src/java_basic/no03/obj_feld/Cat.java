@@ -6,6 +6,7 @@ public class Cat extends Animal {
 	 * ジャンプする
 	 */
 	public void jump() {
+		//猫は脚力が強いため倍飛べる
 		System.out.println("60cm跳んだ!!");
 	}
 	
